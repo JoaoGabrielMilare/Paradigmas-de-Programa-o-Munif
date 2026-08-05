@@ -1,0 +1,8 @@
+Nome da linguagem: Closure
+Paradigmas: Paradigma funcional sendo o principal da linguagem. Mas por rodar em cima da JVM ele comporta a orientação a objetos. Criação de classes, objetos, etc.
+Faixa salarial e oportunidade de vagas: 
+	- Vaga: Backend Software Engineer (Latino Legends) -> Remoto (Período integral)
+	- Linguagem: Clojure e ClojureScript
+	- Salário: USD $6,000 - 9,000
+	- Fonte: Linkedin
+
