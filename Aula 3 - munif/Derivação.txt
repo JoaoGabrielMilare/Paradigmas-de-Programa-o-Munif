@@ -1,0 +1,22 @@
+Derivação do bloco `for`
+`stmt`
+=> `loop`
+=> `for ( <var-dec> = <expn> ; <expn> ; <updt-for> ) { <blck> }`
+=> `for ( <type> <name> = <expn> ; <expn> ; <updt-for> ) { <blck> }`
+=> `for ( int i = <lit-val> ; <expn> ; <updt-for> ) { <blck> }`
+=> `for ( int i = <int-val> ; <expn> ; <updt-for> ) { <blck> }`
+=> `for ( int i = 1 ; <expn> ; <updt-for> ) { <blck> }`
+=> `for ( int i = 1 ; <expn> <op-2> <expn> ; <updt-for> ) { <blck> }`
+=> `for ( int i = 1 ; <name> <cmpn> <lit-val> ; <updt-for> ) { <blck> }`
+=> `for ( int i = 1 ; i <= <int-val> ; <updt-for> ) { <blck> }`
+=> `for ( int i = 1 ; i <= 10 ; <updt-for> ) { <blck> }`
+=> `for ( int i = 1 ; i <= 10 ; <name ++> ) { <blck> }`
+=> `for ( int i = 1 ; i <= 10 ; i ++ ) { <blck> }`
+=> `for ( int i = 1 ; i <= 10 ; i ++ ) { <stmt> }`
+=> `for ( int i = 1 ; i <= 10 ; i ++ ) { cout << <expn> << <expn> ; }`
+=> `for ( int i = 1 ; i <= 10 ; i ++ ) { cout << <name> << <lit-val> ; }`
+=> `for ( int i = 1 ; i <= 10 ; i ++ ) { cout << i << endl ; }`
+```cpp
+for ( int i = 1 ; i <= 10 ; i ++ ) { 
+    cout << i << endl ; 
+}

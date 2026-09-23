@@ -1,0 +1,102 @@
+Regras gramaticais para C++:
+
+https://jimfix.github.io/csci221/lectures/C-grammar-wk01.html
+https://en.cppreference.com/cpp/language/for
+
+
+Código do "for":
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    for (int i = 1; i <= 10; i++) {
+        cout << i << endl;
+    }
+    
+    return 0;
+}
+
+
+Regras que vamos utilizar:
+
+prgm ::= incls using-dir main
+
+incls ::= incl | incl incls
+
+incl ::= #include <iostream> | #include <string> | …
+
+using-dir ::= using namespace std;
+
+main ::= int main() { blck }
+
+blck ::= stmt | stmt blck
+
+stmt ::=
+      name = expn ;
+    | var-dec ;
+    | var-dec = expn ;
+    | cndl
+    | loop
+    | updt
+    | cout << expn << expn ;
+    | return expn ;
+    | return ;
+
+var-dec ::= type name
+
+type ::= int | bool | double | char | std::string
+
+name ::= x | i | y0 | sum | doThis | …
+
+loop ::=
+      while ( expn ) { blck }
+    | do { blck } while ( expn );
+    | for ( var-dec = expn ; expn ; updt-for ) { blck }
+
+updt ::=
+      name op-2 = expn ;
+    | name ++ ;
+    | name -- ;
+    | ++ name ;
+    | -- name ;
+
+updt-for ::= name ++ | name --
+
+cndl ::=
+      if ( expn ) { blck }
+    | if ( expn ) { blck } else { blck }
+
+expn ::=
+      expn op-2 expn
+    | op-1 expn
+    | lit-val
+    | ( expn )
+    | name
+
+op-2 ::= arit | logc | cmpn | shft
+
+cmpn ::= == | != | > | >= | < | <=
+
+arit ::= + | - | * | / | %
+
+logc ::= && | ||
+
+shft ::= << | >>
+
+op-1 ::= - | !
+
+lit-val ::= int-val | bool-val | str-val | chr-val | dbl-val | endl
+
+int-val ::= … | -2 | -1 | 0 | 1 | 2 | … | 10 | …
+
+bool-val ::= true | false
+
+str-val ::= "hello" | …
+
+chr-val ::= 'h' | …
+
+dbl-val ::= 42.0 | 3.14159 | …
+
+
